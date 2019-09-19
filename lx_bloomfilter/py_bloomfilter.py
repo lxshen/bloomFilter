@@ -15,7 +15,7 @@ class SimpleHash(object):
 
 
 class BloomFilter(object):
-    def __init__(self, REDIS_URL, blockNum=1, key='bloom_taobao'):
+    def __init__(self, REDIS_URL, DB, blockNum=1, key='bloom_taobao'):
         """
         :param host: the host of Redis
         :param port: the port of Redis
@@ -24,7 +24,7 @@ class BloomFilter(object):
         :param key: the key's name in Redis
         """
         # self.server = redis.Redis(REDIS_URL)
-        self.server = redis.from_url(REDIS_URL)
+        self.server = redis.from_url(REDIS_URL, DB)
         self.bit_size = 1 << 31  # Redis的String类型最大容量为512M，现使用256M
         self.seeds = [5, 7, 11, 13, 31, 37, 61]
         self.key = key

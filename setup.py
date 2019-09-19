@@ -10,7 +10,7 @@ setup(
     name='lx_bloomfilter',  # '库的名称,一般写成文件夹的名字就可以了，也有的人不写成文件夹的名字，那么pip install和具体的import使用时候就不一样了，用起来会十分蛋疼，有一些包就是这样的。比如一个包，安装时候是pip install  xxx,但当你要使用时候要import yyy
 
 
-    version="0.1.0",                  # 版本，每次发版本都不能重复，每次发版必须改这个地方
+    version="0.1.2",                  # 版本，每次发版本都不能重复，每次发版必须改这个地方
     description=(
         'Python implementation Bloom filter'   # 一个简介，别人搜索包时候，这个概要信息会显示在在搜索列表中
 
